@@ -6,19 +6,83 @@ body {
     background-position: center;
     height: 100%;
     margin: 0;
-  }
+}
 
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
     margin: 0;
     padding: 0;
 }
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article {
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries for different screen sizes */
+
+/* Tablet screens (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    article {
+        width: 60%;
+        margin: 10px;
+    }
+}
+
+/* Mobile screens (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    article {
+        width: 90%;
+        margin: 5px;
+    }
+}
+
+/* Extra small screens (max-width: 320px) */
+@media only screen and (max-width: 320px) {
+    body {
+        font-size: 10px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    article {
+        width: 100%;
+        margin: 0;
+    }
+}
 
 header {
     margin-top: 0;
-    background-color: #333; 
+    background-color: #333;
     color: #fff;
     text-align: center;
 }
@@ -39,33 +103,106 @@ nav li {
 
 nav a {
     color: #fff;
-    text-decoration:solid;
+    text-decoration: solid;
 }
 
 nav a:hover {
-    color:brown;
+    color: brown;
     text-decoration: underline;
 }
 
-h1{
+h1 {
     margin: 5px;
     padding: 5px;
     text-align: center;
 }
 
-h2{
+h2 {
     padding: 5px;
     margin: 5px;
     text-align: center;
 }
-p{
+
+h3 {
+    text-align: center;
+}
+
+p {
     padding: 10px;
     margin: 5px;
 }
+
 /* p ul{
     padding: 5px;
     margin: 5px;
 } */
+button {
+    display: block;
+    background-color: #4CAF50;
+    color: #fff;
+    margin: 10px auto;
+    /* padding: 5px 10px; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add some basic styling to the button */
+button:hover {
+    background-color: #3e8e41;
+}
+
+#change-background-btn {
+    font-size: 1.2em;
+    /* Adjust the font size to 1.2 times the parent element's font size */
+    padding: 0.5em 1em;
+    /* Adjust the padding to 1em vertically and 2em horizontally */
+}
+
+/* Add media queries to make the design responsive */
+@media (max-width: 768px) {
+    #background-container {
+        width: 90%;
+        /* Adjust the width to 90% on smaller screens */
+        height: 40vh;
+        /* Adjust the height to 40% of the viewport height on smaller screens */
+    }
+
+    #change-background-btn {
+        font-size: 1em;
+        /* Adjust the font size to 1em on smaller screens */
+        padding: 0.5em 1em;
+        /* Adjust the padding to 0.5em vertically and 1em horizontally on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #background-container {
+        width: 100%;
+        /* Adjust the width to 100% on very small screens */
+        height: 30vh;
+        /* Adjust the height to 30% of the viewport height on very small screens */
+    }
+
+    #change-background-btn {
+        font-size: 0.8em;
+        /* Adjust the font size to 0.8em on very small screens */
+        padding: 0.2em 0.5em;
+        /* Adjust the padding to 0.2em vertically and 0.5em horizontally on very small screens */
+    }
+}
+
+/* Add some basic styling to the container element */
+#background-container {
+    width: 80%;
+    /* Adjust the width to 80% of the parent element */
+    height: 60vh;
+    /* Adjust the height to 60% of the viewport height */
+    background-size: cover;
+    background-position: center;
+    margin: 40px auto;
+    /* Add some margin to center the container */
+}
 
 footer {
     background-color: #333;
@@ -74,8 +211,8 @@ footer {
     margin: 0;
     text-align: center;
     clear: both;
-  }
-  
-  footer p {
+}
+
+footer p {
     margin: 0;
-  }
+}
